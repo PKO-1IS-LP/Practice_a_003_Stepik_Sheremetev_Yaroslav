@@ -1,0 +1,5 @@
+chislo = input("Число:" )
+a = int(chislo[0])
+b = int(chislo[1])
+c = int(chislo[2])
+print(a+b+c)
