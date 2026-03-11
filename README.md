@@ -631,6 +631,91 @@ else:
     print("Алон, всё нормально, это числа!")
 ```
 
+# 8.1 Цикл while и for
+## Информация:
+
+## Задания:
+1.
+```
+a = 1
+b = 5
+
+while a != b:
+    print(a, end=' ')
+    a += 1
+
+print(b)
+```
+2.
+```
+users, number = list(map(int,input().split()))
+count = 1
+list = []
+
+while count <= users:
+    if count % number == 0:
+        list.append(count)
+    count += 1
+
+print(list)
+```
+3.
+```
+```
+4.
+```
+for i in list_in:
+    print(i)
+```
+5.
+```
+n = int(input()) + 1
+for i in range(n):
+    print(i, end=' ')
+```
+6.
+```
+num = int(input())
+
+for i in range(1, 10):
+    print(f'{num} * {i} = {num * i}')
+```
+7.
+```
+for num in sorted(list_num, reverse=True)[:4]:
+    print(num, end=' ')
+```
+8.
+```
+```
+9.
+```
+result = []
+
+for i in list_in:
+    for a in i:
+        result.append(a)
+
+print(result)
+```
+10.
+```
+
+# 8.2 Итератор, функции и for
+## Информация:
+
+## Задания:
+1.
+
+
+
+
+
+
+
+
+
+
 
 
 
