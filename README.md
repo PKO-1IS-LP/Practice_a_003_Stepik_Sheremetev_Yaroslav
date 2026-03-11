@@ -10,9 +10,8 @@ courses_completed = 1
 ```
 # hello, world!
 ```
-## 3.1 Числа 1
-### Конспект:
 
+## 3.1 Числа 1
 ### Задания:
 1.
 ```
@@ -71,4 +70,64 @@ len_of_car = len_of_sofa = len_of_carpet = 1.37
 print(r, g, b, age, weight, height,
       line_length, radius, diagonal,
       len_of_car, len_of_sofa, len_of_carpet)
+```
+
+## 3.2 Числа 2
+### Задания:
+1.
+```
+squidward = -5
+patrick_starfish = 4
+spongebob = 25
+
+print(squidward ** 2, patrick_starfish ** 2, spongebob ** 2)
+```
+2.
+```
+mr_krabs = 4
+gary = 9
+sandy = 16
+
+print(mr_krabs ** 0.5, gary ** 0.5, sandy ** 0.5)
+```
+3.
+```
+print(friend_count // 4)
+```
+4.
+```
+minutes = number // 60
+seconds = number % 60
+print(minutes, seconds)
+```
+5.
+```
+# Переменная cake_number уже создана, просто используйте её в своём коде
+alon = cake_number // 100000
+van_dama = (cake_number // 10000) % 10
+stal_one = (cake_number // 1000) % 10
+jecki_kachan = (cake_number // 100) % 10
+chack_no_rise = (cake_number // 10) % 10
+bruslya = cake_number % 10
+```
+6.
+```
+a = (20 + 20) * 2        # должно получиться 80
+b = 2 ** (2 + 1)         # должно получиться 8
+c = 3 * (3 ** (2 + 1))   # должно получиться 81
+d = 2 ** 2 * -2       # должно получиться -8
+
+print(a, b, c, d)
+```
+6.
+```
+print(kassa == check)
+```
+7.
+```
+print(150 <= height <= 190)
+```
+8.
+```
+print(exam_score != 2)
 ```
