@@ -483,6 +483,169 @@ p1, p2, p3, *p4, p5 = present
 print(p1, p2, p3, p4, p5)
 ```
 
+# 6.1 Встроенные функции
+## Информация:
+
+## Задания:
+1.
+```
+number = input().split('.')
+number = [int(number[0]), int(number[1])]
+print(number)
+```
+2.
+```
+list_number = [float(input()), float(input()), float(input())]
+print(list_number)
+```
+3.
+```
+# переменные num1 и num2 уже созданы, используйте их в вашем коде:
+number = str(num1) + str(num2)
+number = int(number)
+print(number)
+```
+4.
+```
+point1 = float(input())  # принимаем от пользователя первую координату
+point2 = float(input())  # принимаем от пользователя вторую координату
+
+# ваш код ниже:
+distance = abs(point2 - point1)
+distance = round(distance, 1)
+print(distance)
+```
+5.
+```
+# Список data уже создан волшебным образом:
+
+summa = sum(map(int, data[1]))  # количество товаров
+price = round(sum(map(float, data[3])) / 3)  # средняя цена
+description = ', '.join(data[2])  # описание товаров
+
+print(f'''Название: {data[0]}
+Количество: {summa}
+Описание товара: {description}
+Средняя цена: {price}
+Отзыв: {data[4]}''')
+```
+6.
+```
+# Переменная exchange_rate уже создана волшебным образом
+max_num = max(exchange_rate, default='неизвестно')
+min_num = min(exchange_rate, default='неизвестно')
+
+print(f'Максимальное значение валюты: {max_num}')
+print(f'Минимальное значение валюты: {min_num}')
+```
+7.
+```
+list_grade = list(map(int, input().split()))
+result_average = round(sum(list_grade) / len(list_grade))
+print(f'Оценка за четверть: {result_average}')
+```
+8.
+```
+str_input = input().lower()
+sort_str = sorted(str_input)
+sort_str = "".join(sort_str)
+print(sort_str)
+```
+
+# 7.1 Условные и логические операторы
+## Информация:
+
+## Задания:
+1.
+```
+if input() == 'start':
+    print('Запускаю программу')
+```
+2.
+```
+w_1, w_2 = input().lower().split()
+
+if w_1[-1] == w_2[0]:
+    print("Слово подходит")
+else:
+    print("Слово не подходит")
+```
+3.
+```
+garbage = input()
+
+if garbage == 'металл':
+    print('жёлтый')
+elif garbage == 'бумага':
+    print('синий')
+elif garbage == 'стекло':
+    print('зелёный')
+elif garbage == 'пластик':
+    print('оранжевый')
+else:
+    print('ручная сортировка')
+4.
+```
+list_name = ["Джони Депп", "Джеки Чан", "Билли Айлиш"]
+
+# ваш код ниже:
+name = input()
+if name not in list_name:
+    print("Мошенник!")
+```
+5.
+```
+word = input()
+
+if len(word) < 3:
+    print(False)
+elif word[0].isupper() and word[-1].isdigit() and " " not in word:
+    print(True)
+else:
+    print(False)
+```
+6.
+```
+-----
+```
+7.
+```
+login, password = input(), input()
+
+if login == "admin":
+    if password == "read":
+        print("Редактор в режиме чтения")
+    elif password == "edit":
+        print("Редактор в режиме редактирования")
+    else:
+        print("Неправильный пароль")
+else:
+    print(f"Пользователь {login}")
+```
+8.        
+```
+if isinstance(request[0],str) or isinstance(request[2],str):
+    print("Алон, исправь строки на числа!")
+else:
+    print("Алон, всё нормально, это числа!")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
