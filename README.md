@@ -699,21 +699,416 @@ for i in list_in:
 print(result)
 ```
 
+# 8.2 Итератор, функции и for
+## Информация:
 
+## Задания:
+1.
+```
+n = int(input())
 
+lcm = 146520
 
+result = []
+for i in range(lcm, n + 1, lcm):
+    result.append(i)
 
+print(*result)
+```
+2.
+```
+my_list = [10, 20, 30, 40]
+my_iterator = iter(my_list)
 
+print(next(my_iterator))  
+print(next(my_iterator))  
 
+my_iterator = iter(my_list)
 
+print(next(my_iterator))
+print(next(my_iterator))
+print(next(my_iterator))
+print(next(my_iterator))
+```
+3.
+```
+total = 0
+for game1, game2 in list_in:
+    total += game1 + game2
+print(total)
+```
+4.
+```
+print("№:   Имя:")
+for i, name in enumerate(list_q, 1):
+    print(f"{i}    {name}")
+```
+5.
+```
+estimates = sorted(input().split())
+max_est = estimates[-1]  # самая высокая оценка
+count = 0  # будем подсчитывать количество высокой оценки
 
+for i in reversed(estimates):  # чтобы в решении было и sorted() и reversed()
+    if i < max_est:
+        break
+    else:
+        count += 1
 
+print(f"Самая высокая оценка: {max_est}")
+print(f"Количество: {count} шт")
+```
+6.
+```
+for sub, est in zip(subjects, estimates):
+    est = str(est)[1:-1]  # убирает скобки в строке, например в "[5, 5, 5]"
+    print(f'{sub}: {est}')
+```
+7.
+```
+list_result = [[], [], [], [], []]
 
+for i in map(int, input().split()):
+    list_result[i-1].append(i)
 
+print(list_result)
+```
 
+# 9.1 Кортежи и множества
+## Информация:
 
+## Задания:
+1.
+```
+result = tuple(input().split())
+print(result)
+```
+2.
+```
+# Переменные t1 и t2 уже созданы волшебным образом.
+result = t1 + t2
+print(result)
+```
+3.
+```
+# Переменная tuple_orig уже создана волшебным образом.
+tuple_orig = tuple(sorted(tuple_orig))
+print(tuple_orig)
+```
+4.
+```
+# ваш код:
+right_answer = tuple(input().split())
+person_answer = tuple(input().split())
+count = 0
 
+for right, person in zip(right_answer, person_answer):
+    if right == person:
+        count += 1
+        
+print(count)
+```
+5.
+```
+input_list = input().split()
+duplicate_count = 0
 
+for i in set(input_list):
+    if input_list.count(i) > 1:
+        duplicate_count += 1
+        
+print(duplicate_count)
+```
+6.
+```
+all_checks = set(input().split())
+persons_checks = input()
+
+if persons_checks in all_checks:    
+    print('Осуществляем возврат')
+else:
+    print('Такой суммы нет')
+```
+7.
+```
+set_pers = set(input().split())
+
+for i in list(set_pers):
+    if i[0] == 'Р':
+        set_pers.discard(i)
+
+set_pers.add('Алон')
+set_pers.add('Эйли')
+
+print(sorted(set_pers))
+```
+8.
+```
+s1 = set(input().split())
+s2 = set(input().split())
+result = s1 | s2
+print(sorted(result))
+```
+9.
+```
+s1 = set(input().split())
+s2 = set(input().split())
+reference = set(input().split())
+
+sklad1 = sorted(reference - s1)
+sklad2 = sorted(reference - s2)
+
+print('Склад 1:', sklad1)
+print('Склад 2:', sklad2)
+```
+10.
+```
+str1 = input().split()
+str2 = input().split()
+str3 = input().split()
+str4 = input().split()
+
+count1 = len(set(str1) & set(str4))
+count2 = len(set(str2) & set(str3))
+rating = count1 + count2
+
+print(rating)
+```
+11.
+```
+s1 = set(input().split())
+s2 = set(input().split())
+
+for i in sorted(s1 ^ s2):
+    print(i, end=' ')
+```
+
+# 10.1 Словари
+## Информация:
+
+## Задания:
+1.
+```
+data = {"Имя": "Алон", "Работа": "Middle Программист"}
+data["Компания"] = "Маркософт"
+data["Работа"] = "Junior Программист"
+print(data)
+```
+2.
+```
+data_in = input().split()
+lessons = {}
+
+for i in data_in:
+    lessons[i] = []
+
+print(lessons)
+```
+3.
+```
+list_lessons = input().split()
+dict_lessons = {}
+
+for i in list_lessons:
+    num = list(map(int, input().split()))  # принимаем оценки и сохраняем их в список из чисел
+    dict_lessons[i] = num  # создаём ключ:значение, где значением будут наши оценки
+   
+print(dict_lessons)
+```
+4.
+```
+s = sorted(input().split())
+d = {}
+
+for i in s:
+    if i in d:
+        d[i] += 1
+    else:
+        d[i] = 1
+
+print(d)
+```
+5.
+```
+description.update(description_new)
+print(description)
+```
+6.
+```
+search = input()
+all_students = class_7A | class_7B | class_3A
+print(all_students.get(search, "Такого ученика нет"))
+```
+7.
+```
+for key, value in stock.items():
+    result = "отсутствует" if value == 0 else f"остаток: {value} шт"
+    print(f"Товар: {key}, {result}")
+```
+8.
+```
+product = input().split()
+stock = dict.fromkeys(product, 0)
+print(stock)
+```
+9.
+```
+list_names = list(students.keys()) 
+l = len(list_names) 
+
+for i in range(l):
+    m, f, h = map(int, input().split()) 
+    name = list_names[i]  
+    
+    students[name]["математика"].append(m)
+    students[name]["физика"].append(f)
+    students[name]["химия"].append(h)
+
+print(students)
+```
+
+# 11.1 Функции 1
+## Информация:
+
+## Задания:
+1.
+```
+def check_even(number):
+    if number % 2 == 0:
+        print("Число чётное")
+    else:
+        print("Число нечётное")
+
+num = int(input())
+check_even(num)
+```
+2.
+```
+def convert_to_float(string):
+    try:
+        return float(string)
+    except ValueError:
+        return None
+
+user_input = input()
+result = convert_to_float(user_input)
+print(result)
+```
+3.
+```
+def check_login_password(login, password, true_login="admin", true_password="admin"):
+    if login == true_login and password == true_password:
+        print(True)
+    else:
+        print(False)
+
+user_login = input()
+user_password = input()
+check_login_password(user_login, user_password)
+```
+4.
+```
+def super_sum(*args):
+    return sum(args)
+```
+5.
+```
+def super_minus(**kwargs):    
+    list_value = tuple(kwargs.values())
+    result = list_value[0] 
+    for value in list_value[1:]:
+        result -= value
+    return result
+
+num1 = super_minus(n1=10, n2=2, n3=5)  # 10-2-5 = 3
+num2 = super_minus(n1=100, n2=20, n3=50, n4=10, n5=10, n6=5)
+num3 = super_minus(n1=700, n2=100, n3=300, n4=200) 
+```
+6.
+```
+balance = int(input())
+price = int(input())
+
+def buy():
+    def check_balance():
+        if balance >= price:
+            return True
+        else:
+            return False
+    
+    if check_balance():
+        print("Покупка совершена")
+    else:
+        print("Недостаточно средств")
+
+buy()
+```
+7.
+```
+balance = int(input())
+price = int(input())
+
+def buy():
+    def check_balance():
+        return balance >= price
+    
+    def change_balance():
+        global balance
+        balance -= price
+    
+    def show_balance():
+        print(f"Ваш баланс: {balance}")
+    
+    if check_balance():
+        print("Покупка совершена")
+        change_balance()
+        show_balance()
+    else:
+        print("Недостаточно средств")
+
+buy()
+```
+
+# 11.2 Функции 2 (lambda)
+## Информация:
+
+## Задания:
+1.
+```
+def input_my_desires(*desires: str) -> None:
+    """
+    Функция принимает желания пользователя и выводит мотивирующее сообщение.
+    
+    :param desires: Произвольное количество желаний в виде строк
+    :return: None
+    """
+    print("Ваши желания приняты! А теперь приложите усилия для их исполнения!")
+
+input_my_desires("Стать успешным программистом", "Путешествовать по миру", "Выучить Python")
+```
+2.
+```
+def filter_age(item):
+    name, age = item
+    return 18 <= age <= 30
+
+filtered_names = [name for name, age in filter(filter_age, persons.items())]
+filtered_names.sort()
+print(filtered_names)
+```
+3.
+```
+sorted_persons = sorted(persons, key=lambda x: (x['bad_habits'], -x['age'] if not x['bad_habits'] else 0))
+for person in sorted_persons:
+    print(person)
+```
+4.
+```
+filtered_persons = [person for person in persons if person['rating'] >= 4.5]
+sorted_persons = sorted(filtered_persons, key=lambda x: x['name'])
+for person in sorted_persons:
+    print(person['name'])
+```
 
 
 
